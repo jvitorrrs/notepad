@@ -1,0 +1,39 @@
+
+<div class="div-abrir" #divAbrir>
+    <h2>Abrir</h2>
+    <div class="d-flex flex-column align-items-center">
+        <div class="border border-dark rounded w-100 text-center p-1">
+          <div 
+          *ngIf="data==null"
+          class="d-flex justify-content-center align-items-center">
+            <mat-spinner></mat-spinner>
+          </div>
+          <div>
+            <mat-selection-list #notes 
+            [multiple]="false">
+              <mat-list-option 
+              *ngFor="let n of data"
+               [value]="n">
+                {{n.name}}
+              </mat-list-option>
+            </mat-selection-list>
+          </div>
+        </div>
+        <div>
+          <button mat-raised-button (click)="abrirNota()">Abrir</button>
+          <button mat-raised-button (click)="cancel()">Cancelar</button>
+        </div>
+    </div>
+    </div>
+<div class="div-salvar">
+  <h2>Salvar</h2>
+  <div class="d-flex flex-column align-items-center">
+    <div class="border border-dark rounded w-100 text-center p-2">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Título:</mat-label>
+        <input matInput placeholder="Ex. Minhas Notas" >
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+

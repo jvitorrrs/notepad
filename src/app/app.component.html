@@ -1,0 +1,37 @@
+<div class="d-flex justify-content-center p-5">
+  <div class="mt-5 d-flex flex-column align-items-center">
+    <div>
+      <h1>{{title}}</h1>
+    </div>
+    <div class="border border-dark rounded w-100">
+      <button mat-icon-button 
+      matTooltip="Salvar nota"
+      [matTooltipPosition]="'above'"
+      (click)="saveNote()">
+        <mat-icon>save</mat-icon>
+      </button>
+      <button mat-icon-button
+      matTooltip="Nova nota"
+      [matTooltipPosition]="'above'"
+      >
+        <mat-icon>note_add</mat-icon>
+      </button>
+      <button mat-icon-button
+      matTooltip="Abrir nota"
+      [matTooltipPosition]="'above'"
+      (click)="get()">
+        <mat-icon>folder_open</mat-icon>
+      </button>
+    </div>
+    <div>
+      <textarea matInput 
+      rows="10" 
+      cols="75"
+      class="p-2"
+      [(ngModel)]="text"
+      (change)="verify=false">
+  </textarea>
+  <div *ngIf="verify">Digite alguma coisa.</div>
+    </div>
+  </div>
+</div>

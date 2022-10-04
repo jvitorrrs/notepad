@@ -1,0 +1,25 @@
+.example-listbox{
+    list-style:none;
+}
+
+.div-abrir{
+    width:300px;
+}
+
+.names-div-abrir{
+    transition:background-color 200ms;
+    cursor:pointer;
+}
+
+    .names-div-abrir:hover{
+        background-color:lightgrey;
+    }
+
+.mat-raised-button{
+    margin:10px;
+    transition:background-color 200ms;
+}
+
+    .mat-raised-button:hover{
+        background-color: lightgray;
+    }

@@ -1,0 +1,6 @@
+::ng-deep .mat-tooltip{
+    position:relative;
+    bottom:-10px;
+    padding:2px;
+    font-size:12px;
+}
